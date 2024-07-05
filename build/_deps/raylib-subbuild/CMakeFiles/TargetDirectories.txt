@@ -1,0 +1,3 @@
+D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate.dir
+D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/CMakeFiles/edit_cache.dir
+D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,20 @@
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterStruct: false
+  AfterEnum: false
+  AfterUnion: false
+  AfterControlStatement: MultiLine
+  BeforeElse: false
+  SplitEmptyFunction: true
+  SplitEmptyNamespace: true
+  AfterCaseLabel: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterExternBlock: true
+
+PointerAlignment: Left
+IndentWidth: 4
+SeparateDefinitionBlocks: Leave
+MaxEmptyLinesToKeep: 2
+

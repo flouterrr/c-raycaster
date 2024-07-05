@@ -1,0 +1,21 @@
+# ninja log v6
+97285	97361	7419178662855534	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	45140ad2d579a511
+5	85	7419177690087649	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	26bc70f5bc438c72
+5	85	7419177690087649	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	26bc70f5bc438c72
+86	96900	7419178658207293	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	cafdbdb452a7c24e
+86	96900	7419178658207293	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	cafdbdb452a7c24e
+96900	96976	7419178658998745	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	ce4d4a8861bb99a8
+97285	97361	7419178662855534	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	45140ad2d579a511
+96977	97054	7419178659751340	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	d176776f68f56b51
+96900	96976	7419178658998745	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	ce4d4a8861bb99a8
+97362	97466	7419178663874328	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	fb3453c0409f49be
+96977	97054	7419178659751340	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	d176776f68f56b51
+97054	97134	7419178660541052	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	d0c9e3f2d54ce733
+97054	97134	7419178660541052	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	d0c9e3f2d54ce733
+97134	97210	7419178661306112	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	2f3d8092c27dbde3
+97134	97210	7419178661306112	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	2f3d8092c27dbde3
+97210	97285	7419178662075825	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	fe294826033a348d
+97362	97466	7419178663874328	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete	fb3453c0409f49be
+97210	97285	7419178662075825	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	fe294826033a348d
+97362	97466	7419178663874328	CMakeFiles/raylib-populate-complete	fb3453c0409f49be
+97362	97466	7419178663874328	D:/dev/c_projects/raycaster/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	fb3453c0409f49be
