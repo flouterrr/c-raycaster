@@ -249,7 +249,7 @@ Vector2 get_screen_plane_point(player_t* player, uint8_t index)
 bool minimap_enabled = false;
 
 bool fog_enabled = true;
-float fog_curve = 20.0f;
+float fog_curve = 1.0f;
 
 
 void render_world(scene_t* scene, player_t* player)
