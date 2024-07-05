@@ -12,7 +12,7 @@
 
 #define RENDER_ASPECT_RATIO_W 16
 #define RENDER_ASPECT_RATIO_H 9
-#define RENDER_FACTOR 15
+#define RENDER_FACTOR 20
 
 #define RENDER_WIDTH (RENDER_ASPECT_RATIO_W * RENDER_FACTOR)
 #define RENDER_HEIGHT (RENDER_ASPECT_RATIO_H * RENDER_FACTOR)
@@ -246,7 +246,11 @@ Vector2 get_screen_plane_point(player_t* player, uint8_t index)
     return v;
 }
 
+bool minimap_enabled = false;
+
+bool fog_enabled = true;
 float fog_curve = 20.0f;
+
 
 void render_world(scene_t* scene, player_t* player)
 {
@@ -279,10 +283,12 @@ void render_world(scene_t* scene, player_t* player)
         }
 
         Color col = get_tile_color(result.tile_id);
-        // distance fog
-        float fog = Clamp(dist, 0.0f, FAR_CLIP_PLANE) / FAR_CLIP_PLANE;
-        fog = powf(fog, fog_curve);
-        col = ColorBrightness(col, -fog);
+        if (fog_enabled) {
+            // distance fog
+            float fog = Clamp(dist, 0.0f, FAR_CLIP_PLANE) / FAR_CLIP_PLANE;
+            fog = powf(fog, fog_curve);
+            col = ColorBrightness(col, -fog);
+        }
         // basic shading based on side of wall
         float shade = result.hit_vertical ? 0.15f : 0.0f;
         col = ColorBrightness(col, -shade);
@@ -418,10 +424,10 @@ int main(int argc, char** argv)
             const float dt = GetFrameTime();
 
 
-            if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
                 DisableCursor();
             }
-            if(IsMouseButtonPressed(MOUSE_BUTTON_RIGHT)) {
+            if (IsMouseButtonPressed(MOUSE_BUTTON_RIGHT)) {
                 EnableCursor();
             }
 
@@ -448,6 +454,21 @@ int main(int argc, char** argv)
                 player.pos = Vector2Add(
                     player.pos, Vector2Scale(strafe_vec, move_speed * dt));
             }
+
+            float fog_curve_add = 0.7f;
+            if (IsKeyDown(KEY_O)) {
+                fog_curve = MAX(fog_curve - (fog_curve_add * dt), 0.01f);
+            }
+            if (IsKeyDown(KEY_P)) {
+                fog_curve = MIN(fog_curve + (fog_curve_add * dt), 1.0f);
+            }
+            if (IsKeyPressed(KEY_F)) {
+                fog_enabled = !fog_enabled;
+            }
+
+            if (IsKeyPressed(KEY_M)) {
+                minimap_enabled = !minimap_enabled;
+            }
         }
 
         // render
@@ -466,9 +487,16 @@ int main(int argc, char** argv)
             }
         }
 
-        render_minimap(&scene, &player);
+        if (minimap_enabled) {
+            render_minimap(&scene, &player);
+        }
 
         DrawFPS(2, 2);
+        if (fog_enabled) {
+            char fog_curve_str[20];
+            sprintf(fog_curve_str, "%f", fog_curve);
+            DrawText(fog_curve_str, 2, 30, 20, WHITE);
+        }
         EndDrawing();
     }
 

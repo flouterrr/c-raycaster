@@ -1,5 +1,3 @@
-build
-./build
-.cache
-./cache
+/build
+/.cache
 build-backup.bat
