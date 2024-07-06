@@ -18,6 +18,7 @@ goto Configure
 :Configure
 @echo on
 cmake -S . -B .\build\%cmake_build_type% -G"%generator%" -Wdev -DCMAKE_C_COMPILER=%compiler% -DCMAKE_BUILD_TYPE=%cmake_build_type%
+copy .\build\%cmake_build_type%\compile_commands.json . /y
 @echo off
 goto Build
 
