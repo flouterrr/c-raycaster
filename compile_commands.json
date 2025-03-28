@@ -1,8 +1,0 @@
-[
-{
-  "directory": "D:/dev/c_projects/raycaster/build/Debug",
-  "command": "D:\\dev\\w64devkit\\bin\\gcc.exe -ID:/dev/c_projects/raycaster/include -g -std=gnu2x -o CMakeFiles\\raycaster.dir\\src\\main.c.obj -c D:\\dev\\c_projects\\raycaster\\src\\main.c",
-  "file": "D:\\dev\\c_projects\\raycaster\\src\\main.c",
-  "output": "CMakeFiles\\raycaster.dir\\src\\main.c.obj"
-}
-]
